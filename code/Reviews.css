@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+body, html {
+	margin: 0;
+	font-family: Roboto, Arial, helvetica, sans-serif;
+    
+}
+
+a {
+	outline: none;
+}
+
+.navbar-container {
+	text-align: center;
+	background-color: 	#f8d9e5;
+	box-shadow: 0px -20px 5px 20px #333333;
+	padding: 25px;
+	font-size: 0;
+    height: 15vh;
+}
+
+.navbar-container ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar-container ul li {
+	display: inline-block;
+	font-size: 16px;
+}
+
+.navbar-container ul li a {
+	color: #000;
+    font-weight: 800;
+	text-decoration: none;
+	display: inline-block;	
+	padding: 10px;
+	transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+	height: 3px;
+	background-color: transparent;
+	width: 0%;
+	transition: width 0.2s, background-color 0.5s;
+	margin: 0 auto;
+}
+
+.navbar-container ul li.active-link .underline {
+	width: 100%;
+	background-color: #000;
+}
+
+.navbar-container ul li:hover .underline {
+	background-color: #000;
+	width: 100%;
+}
+
+
+.navbar-container ul li:active a {
+	transition: none;
+	color: #000;
+}
+
+.navbar-container ul li:active .underline {
+	transition: none;
+	background-color: #000;
+}
+.logo{
+    float: left;
+    margin-top: -9mm;
+}
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .nav-link .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0;
+    margin: 0;
+  }
+  .nav-link:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu li {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+  .dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+  }
+  .dropdown-menu li a:hover {
+    color: #f09cbc;
+  }
+  footer{
+    text-align: center;
+	background-color: 	#f8d9e5;
+    height: 7vh;
+    margin-top: 10mm;
+  }
+
+/*-=====================================*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    background-color: black;
+    margin: 0 auto;
+}
+
+@media (max-width: 1440px){
+    .main-wrapper{
+        width: 100vw;
+    }
+}
+
+.back-text{
+    position: relative;
+    z-index: -2000;
+}
+
+
+.reviews{
+    margin-top: 10rem;
+    overflow: hidden;
+}
+
+.reviews-title{
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.reviews-title p{
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: white;
+}
+
+.reviews-card{
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    width: 781px;
+}
+
+@media (max-width: 425px){
+    .reviews-card{
+        grid-template-columns: 1fr;
+        width: fit-content;
+    }
+}
+.card-img{
+    width: fit-content;
+    height: fit-content;
+}
+
+.card-text{
+    background-color: white;
+    padding: 2rem 4rem; 
+    height: 359px;
+    overflow: hidden;
+}
+
+@media (max-width: 425px){
+    .card-text{
+        padding: 1rem 2rem;
+        width: 70vw;
+        height: fit-content;
+    }
+}
+
+.card-title p{
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 105.52%;
+}
+
+.card-para{
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-author{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+
+.reviews-row{
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 425px){
+    .card-title p{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .card-para p{
+        font-size: 0.7rem;
+    }
+
+    .card-author p{
+        font-size: 0.7rem;
+    }
+    .reviews-row{
+        flex-direction: column;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .reviews img{
+        width: 70vw;
+    }
+}
+
+.row-first, .row-third{
+    animation: move-first 20s linear infinite;
+    margin-bottom: 2rem;
+}
+
+.row-second{
+    transform: translateX(-1000px);
+    animation: move-second 20s linear infinite;
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 425px){
+    .row-second, .row-third{
+        display: none;
+    }
+
+    .row-first{
+        animation: none;
+    }
+}
+
+@keyframes move-first{
+    50%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes move-second{
+    50%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1000px);
+    }
+}
