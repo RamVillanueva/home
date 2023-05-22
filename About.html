@@ -18,8 +18,60 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="aos-by-red.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/About.css">
     <title>About Us!</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+    
+        *{
+          margin: 0;
+          padding: 0;
+          font-family: 'Source Code Pro', monospace;
+        }
+    
+        body{
+          background-color: #ffecd7;
+        }
+    
+        section{
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        section h2{
+          position: relative;
+          color: #fff;
+          font-size: 12em;
+        }
+    
+        section img{
+          position: absolute;
+          top: 0;
+          left: 10%;
+          width: 80%;
+        }
+        </style>
+      <script>
+        document.addEventListener("mousemove", parallax);
+    
+        function parallax(e){
+          this.querySelectorAll(".layer").forEach(layer=>{
+            const speed = layer.getAttribute("data-speed");
+            
+            const x = (window.innerWidth - e.pageX*speed)/150;
+            const y = (window.innerHeight - e.pageY*speed)/150;
+            
+            layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+          })
+        }
+      </script>
 </head>
 
 <body>
@@ -101,6 +153,19 @@
         </div>
     </div>
 
+
+    <section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script>
+            AOS.init({
+              duration: 3000,
+              once: true,
+            });
+          </script>
+          <img src="https://res.cloudinary.com/dhdpz8bkn/image/upload/v1683253002/szsd5rcid17ygsm3v4ik.png" data-speed="-7" class="layer" data-aos="fade-up" data-aos-duration="500">
+        <img src="https://res.cloudinary.com/dhdpz8bkn/image/upload/v1683253002/bhcsymiyciri15almech.png" data-speed="7" class="layer" data-aos="fade-up" data-aos-duration="700">
+        <img src="https://res.cloudinary.com/dhdpz8bkn/image/upload/v1683253002/lrvnphpc3aynfkv9etkz.png" data-speed="2" class="layer" data-aos="fade-up" data-aos-duration="900">
+      </section>
 </body>
 <script>
     $(".container a").hover(function () {
